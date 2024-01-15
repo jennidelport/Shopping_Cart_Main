@@ -63,11 +63,30 @@ while True:
          else:
           for i, item in enumerate(shopping_cart, 1):
             print(i, item)
-            removed_item = input("Please enter the index of the item you would like to remove:\n")
-            index = (index)-1
-            removed_item = shopping_cart[index]
-            shopping_cart.pop(index)
-            print(f'{item} removed!')    
+            remove_input = (item)-1
+            remove_input = shopping_cart[item]
+            shopping_cart.pop(item)
+            print(f'{item} removed!')  
+
+            print("----------Your Cart----------")
+            for cart_items in shopping_cart:
+                total += donatable_items.get(cart_items)
+            print(shopping_cart)
+
+            print()
+            print(f"Your total is: £{total:.2f}")
+
+print("Thank you for your PETronage. Please come back soon!")  
+
+
+
+# print("----------Your Cart----------")
+# for cart_items in shopping_cart:
+#     total += donatable_items.get(cart_items)
+# print(shopping_cart)
+
+# print()
+# print(f"Your total is: £{total:.2f}")           
 
 
     
